@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static %}
   {% block content %}
-    <h1>Страница 2</h1>
+<input class="w" type="text" placeholder="w">
+<input class="l" type="text" placeholder="l">
+<input class="h" type="text" placeholder="h">
+
+<div class="buttons">
+  <button>diagonal</button>
+  <button>space</button>
+  <button>volume</button>
+</div>
+
+<p class="output"></p>
+<script type="module" src= "{% static 'js/app.js' %}"></script>
   {% endblock %}
