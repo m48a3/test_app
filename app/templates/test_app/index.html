@@ -149,9 +149,12 @@
 		<div class = "table">
 
 			<form>
-				<input id="x1" type="range" value="100" min="0" max="500">
-				<input id="x2" type="range" value="100" min="0" max="500">
-				<input id="y" type="range" value="100" min="0" max="500">
+<!--				<input id="x1" type="range" value="100" min="0" max="250">-->
+<!--				<input id="x2" type="range" value="100" min="0" max="250">-->
+<!--				<input id="y" type="range" value="100" min="0" max="250">-->
+					<input class = "x1"  type="text" value="10" placeholder="w">
+					<input class = "x2" type="text" value="10" placeholder="l">
+					<input class = "y" type="text" value="10" placeholder="h">
 				<input id="color" type="color" value="#ff8d4b">
 			</form>
 		</div>
@@ -169,9 +172,9 @@ document.body.appendChild(canvas);
 var ctx = canvas.getContext('2d');
 
 
-var x1 = document.querySelector('#x1');
-var x2 = document.querySelector('#x2');
-var y = document.querySelector('#y');
+var x1 = document.querySelector(".x1");
+var x2 = document.querySelector(".x2");
+var y = document.querySelector(".y");
 var color = document.querySelector('#color');
 
 
