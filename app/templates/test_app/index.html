@@ -8,6 +8,16 @@
 		font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		
 	}
+
+	.x1 {
+	width: 50px;
+	}
+	.x2 {
+	width: 50px;
+	}
+	.y {
+	width: 50px;
+	}
 	.rectangle {
 	width: 500px;
 	height: 830px;
@@ -41,7 +51,8 @@
 	border-radius: 10px;
 	display: table-cell;
 	text-align: center;
-	vertical-align: middle
+	vertical-align: middle;
+		color:white;
 	}
 	.positioned {
 	position: absolute;
@@ -75,7 +86,12 @@
 	}
 	.main-text{font-size: 12pt}
 	.big-text{font-size: 24pt}
-	.extra-text{font-size: 72pt}
+	.extra-text{font-size: 38pt;
+	position: absolute;
+	bottom: -25px;
+	left: 60px;
+	color:white;
+	}
 	.text-smallbutton{
 	text-align: center;
 	vertical-align: middle
@@ -152,15 +168,22 @@
 <!--				<input id="x1" type="range" value="100" min="0" max="250">-->
 <!--				<input id="x2" type="range" value="100" min="0" max="250">-->
 <!--				<input id="y" type="range" value="100" min="0" max="250">-->
-					<input class = "x1"  type="text" value="10" placeholder="w">
-					<input class = "x2" type="text" value="10" placeholder="l">
-					<input class = "y" type="text" value="10" placeholder="h">
-				<input id="color" type="color" value="#ff8d4b">
+					<div class = "table-el">
+					<input class = "x1"  type="number" min = "0" max = "250" value="10" placeholder="w">
+					</div><div class = "table-el">
+					<input class = "x2" type="number" min = "0" max = "250" value="10" placeholder="l">
+					</div><div class = "table-el">
+					<input class = "y" type="number" min = "0" max = "250" value="10" placeholder="h">
+					</div><div class = "table-el">
+				<input id="color" type="color" value="#999999">
+					</div>
 			</form>
 		</div>
 	</div>
 	<div class ="rectangle-big">
+		<p class = "extra-text">
 		Выполнить
+		</p>
 	</div>
 </div>
 <script>
