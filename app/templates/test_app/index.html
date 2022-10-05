@@ -218,7 +218,15 @@ var x1 = document.querySelector(".x1");
 var x2 = document.querySelector(".x2");
 var y = document.querySelector(".y");
 var color = document.querySelector('#color');
-
+var all = +x1.value + +x2.value + +y.value;
+console.log (all);
+if (all < 100)
+{
+	x1.value = x1.value*2;
+	console.log (x1);
+	x2.value= x2.value*2;
+	y.value= y.value*2;
+}
 
 function draw(){
 
