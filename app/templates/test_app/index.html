@@ -53,6 +53,16 @@
 	text-align: center;
 	vertical-align: middle;
 		color:white;
+		outline: none;
+		border: 0;
+	}
+	.rectangle-small:hover {
+    vertical-align: middle;
+    background: #808080;
+}
+	.rectangle-small:active {
+    vertical-align: middle;
+    background: #666;
 	}
 	.positioned {
 	position: absolute;
@@ -63,6 +73,9 @@
 	left: 70px;
 
 
+}
+	input[type="file"] {
+    display: none;
 }
 	.text-frame-def {
 	position:  relative;
@@ -110,7 +123,12 @@
 		<p class = "big-text">Характеристики</p>
 		<div class = "inside">
 			<div class = "buttons">
-				<div class = "rectangle-small"> Файл </div>
+				<form>
+					<label class="rectangle-small" >
+						Файл
+					<input class = "rectangle-small" type="file" value="Файл">
+					</label>
+				</form>
 				<div class="form-check">
 					<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
 					<label class="form-check-label" for="flexRadioDefault1">
@@ -169,11 +187,11 @@
 <!--				<input id="x2" type="range" value="100" min="0" max="250">-->
 <!--				<input id="y" type="range" value="100" min="0" max="250">-->
 					<div class = "table-el">
-					<input class = "x1"  type="number" min = "0" max = "250" value="10" placeholder="w">
+					<input class = "x1"  type="number" min = "0" max = "250" value="10" placeholder="w" onKeyUp="if(this.value>250){this.value='250';}else if(this.value<0){this.value='0';}">
 					</div><div class = "table-el">
-					<input class = "x2" type="number" min = "0" max = "250" value="10" placeholder="l">
+					<input class = "x2" type="number" min = "0" max = "250" value="10" placeholder="l" onKeyUp="if(this.value>250){this.value='250';}else if(this.value<0){this.value='0';}">
 					</div><div class = "table-el">
-					<input class = "y" type="number" min = "0" max = "250" value="10" placeholder="h">
+					<input class = "y" type="number" min = "0" max = "250" value="10" placeholder="h"  onKeyUp="if(this.value>250){this.value='250';}else if(this.value<0){this.value='0';}">
 					</div><div class = "table-el">
 				<input id="color" type="color" value="#999999">
 					</div>
@@ -186,6 +204,7 @@
 		</p>
 	</div>
 </div>
+
 <script>
 var canvas = document.createElement('canvas');
 canvas.width = window.innerWidth;
