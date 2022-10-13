@@ -126,7 +126,7 @@
 				<form>
 					<label class="rectangle-small" >
 						Файл
-					<input class = "rectangle-small" type="file" value="Файл">
+					<input class = "rectangle-small" type="file" value="Файл" id="fileinput">
 					</label>
 				</form>
 				<div class="form-check">
@@ -204,7 +204,31 @@
 		</p>
 	</div>
 </div>
+<script type="text/javascript">
+  function readSingleFile(evt) {
+    var f = evt.target.files[0];
+    if (f) {
+      var r = new FileReader();
+      r.onload = function(e) {
+          var contents = e.target.result;
+          var ct = r.result;
+          var words = ct.split(' ');
+          alert(words[0]);
+          document.querySelector(".x1").value = words[0];
+          document.querySelector(".x2").value = words[1];
+          document.querySelector(".y").value = words[2];
+          console.log (words[0]);
+          console.log (words[1]);
+          console.log (words[2]);
+      }
+      r.readAsText(f);
+    } else {
+      alert("Failed to load file");
+    }
+  }
 
+  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+</script>
 <script>
 var canvas = document.createElement('canvas');
 canvas.width = window.innerWidth;
