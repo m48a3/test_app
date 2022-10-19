@@ -272,14 +272,16 @@ var color = document.querySelector('#color');
 var all = 0;
 var all = +x1.value + +x2.value + +y.value;
 console.log (all);
-if (all < 100)
-{
+if (all < 250){
+all = 0;
+while (x1.value*2 < 250 && x2.value*2 < 250 && y.value*2 <250) {
 	x1.value = x1.value*2;
 	console.log (x1);
 	x2.value= x2.value*2;
 	y.value= y.value*2;
+	var all = +x1.value + +x2.value + +y.value;
 }
-
+}
 function draw(){
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
